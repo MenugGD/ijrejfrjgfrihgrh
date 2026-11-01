@@ -1,0 +1,20 @@
+{
+  "entities": {
+    "Tournament": {
+      "title": "Tournament",
+      "description": "Tournament project state",
+      "type": "object",
+      "properties": {
+        "title": { "type": "string" },
+        "lastUpdated": { "type": "number" }
+      },
+      "required": ["title", "lastUpdated"]
+    }
+  },
+  "firestore": {
+    "/tournaments/{tournamentId}": {
+      "schema": "Tournament",
+      "description": "Tournament document"
+    }
+  }
+}

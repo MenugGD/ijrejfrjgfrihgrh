@@ -1,0 +1,6 @@
+{
+  "name": "Versus OBS Overlay - Torneo de Dibujo 12",
+  "description": "Sistema de Overlay para OBS Studio y panel de control en tiempo real para torneo versus de 12 dibujos con animaciones, marcadores en vivo y clasificatoria.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

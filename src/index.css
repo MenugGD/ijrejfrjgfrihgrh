@@ -1,0 +1,111 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-heading: 'Bungee', cursive, sans-serif;
+    --font-impact: 'Teko', sans-serif;
+    --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+  }
+}
+
+.font-heading {
+  font-family: var(--font-heading);
+}
+
+.font-impact {
+  font-family: var(--font-impact);
+}
+
+.font-sans-custom {
+  font-family: var(--font-sans);
+}
+
+/* OBS Chroma / Transparency Classes */
+.obs-transparent {
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
+.obs-green-screen {
+  background-color: #00FF00 !important;
+  background-image: none !important;
+}
+
+.obs-blue-screen {
+  background-color: #0000FF !important;
+  background-image: none !important;
+}
+
+/* Glow & Neon Effects */
+.glow-cyan {
+  box-shadow: 0 0 30px rgba(6, 182, 212, 0.45), 0 0 60px rgba(6, 182, 212, 0.25);
+}
+
+.glow-rose {
+  box-shadow: 0 0 30px rgba(244, 63, 94, 0.45), 0 0 60px rgba(244, 63, 94, 0.25);
+}
+
+.glow-amber {
+  box-shadow: 0 0 30px rgba(245, 158, 11, 0.5), 0 0 70px rgba(245, 158, 11, 0.25);
+}
+
+.text-glow-cyan {
+  text-shadow: 0 0 16px rgba(6, 182, 212, 0.8), 0 0 32px rgba(6, 182, 212, 0.5);
+}
+
+.text-glow-rose {
+  text-shadow: 0 0 16px rgba(244, 63, 94, 0.8), 0 0 32px rgba(244, 63, 94, 0.5);
+}
+
+.text-glow-gold {
+  text-shadow: 0 0 20px rgba(251, 191, 36, 0.9), 0 0 40px rgba(245, 158, 11, 0.6);
+}
+
+/* Animations */
+@keyframes shake {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  20% { transform: translate(-8px, 6px) rotate(-1deg); }
+  40% { transform: translate(8px, -6px) rotate(1deg); }
+  60% { transform: translate(-6px, -4px) rotate(-0.5deg); }
+  80% { transform: translate(6px, 4px) rotate(0.5deg); }
+}
+
+.animate-epic-shake {
+  animation: shake 0.6s cubic-bezier(.36,.07,.19,.97) both;
+}
+
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.8; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.05); }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 2s infinite ease-in-out;
+}
+
+@keyframes vsFlash {
+  0% { transform: scale(3) rotate(-15deg); opacity: 0; filter: brightness(3); }
+  50% { transform: scale(1.1) rotate(4deg); opacity: 1; filter: brightness(1.8); }
+  70% { transform: scale(0.95) rotate(-2deg); opacity: 1; filter: brightness(1.2); }
+  100% { transform: scale(1) rotate(0deg); opacity: 1; filter: brightness(1); }
+}
+
+.animate-vs-intro {
+  animation: vsFlash 0.85s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.6);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(100, 116, 139, 0.5);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.7);
+}
